@@ -1,4 +1,3 @@
-# scripts/quick_data_check_fast.py
 import os
 from pathlib import Path
 
@@ -10,12 +9,12 @@ def count_files(root):
 
 def main():
     base = Path("data")
-    print(f"🔎 Looking in: {base.resolve()}")
+    print(f" Looking in: {base.resolve()}")
     sa_spam = count_files(base / "spamassassin" / "spam")
     sa_ham  = count_files(base / "spamassassin" / "ham")
     en_ham  = count_files(base / "enron" / "ham")
 
-    print("\n✅ Fast counts (no file reading):")
+    print("\n Fast counts (no file reading):")
     print(f"  SpamAssassin spam : {sa_spam}")
     print(f"  SpamAssassin ham  : {sa_ham}")
     print(f"  Enron ham         : {en_ham}")
